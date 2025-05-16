@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portal Escolar São José</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Logotipo Escola São José" />
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre a Escola</a></li>
+                    <li><a href="#cursos">Cursos e Atividades</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><img src="facebook.png" alt="Facebook" /></a>
+                <a href="#" aria-label="Instagram"><img src="instagram.png" alt="Instagram" /></a>
+                <a href="#" aria-label="Twitter"><img src="twitter_x.png" alt="Twitter" /></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <h1>Bem-vindo à Escola Educacional São José</h1>
+            <p>Formando futuros líderes com excelência e dedicação.</p>
+            <a href="#matriculas" class="cta-btn">Matrículas Abertas</a>
+        </div>
+        <!-- Espaço para slideshow / banners -->
+        <div class="banner-slider">
+            <div class="slide active"><img src="banner_escola.png" alt="Foto da Escola" /></div>
+            <div class="slide"><img src="banners/banner2.jpg" alt="Alunos em atividade" /></div>
+            <div class="slide"><img src="banners/banner3.jpg" alt="Evento escolar" /></div>
+            <button class="prev" aria-label="Slide anterior">&#10094;</button>
+            <button class="next" aria-label="Próximo slide">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Destaques da Escola -->
+    <section id="sobre" class="destaques">
+        <h2>Por que Escolher a Escola São José?</h2>
+        <div class="cards">
+            <article class="card">
+                <h3>Missão</h3>
+                <p>Oferecer uma educação de qualidade para formar cidadãos preparados para o futuro.</p>
+            </article>
+            <article class="card">
+                <h3>Visão</h3>
+                <p>Ser referência em educação e inovação na formação de jovens líderes.</p>
+            </article>
+            <article class="card">
+                <h3>Valores</h3>
+                <p>Respeito, ética, excelência e comprometimento com a educação.</p>
+            </article>
+            <article class="card">
+                <h3>Infraestrutura</h3>
+                <p>Ambientes modernos e equipados para proporcionar o melhor aprendizado.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Depoimentos e Histórias de Sucesso -->
+    <section id="depoimentos" class="depoimentos">
+        <h2>Depoimentos e Histórias de Sucesso</h2>
+        <div class="cards">
+            <article class="card">
+                <blockquote>
+                    "A Escola São José transformou a vida do meu filho. A equipe é incrível e dedicada."
+                </blockquote>
+                <p>- Maria Silva, mãe</p>
+            </article>
+            <article class="card">
+                <blockquote>
+                    "Aprendi muito e me preparei para o futuro graças aos excelentes professores."
+                </blockquote>
+                <p>- João Pereira, ex-aluno</p>
+            </article>
+            <article class="card">
+                <blockquote>
+                    "É um privilégio fazer parte desta escola. Ambiente acolhedor e qualidade educacional."
+                </blockquote>
+                <p>- Ana Costa, professora</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Notícias e Eventos -->
+    <section id="noticias" class="noticias">
+        <h2>Notícias e Eventos</h2>
+        <ul>
+            <li>
+                <a href="#">Feira de Ciências 2025 será realizada em junho</a>
+                <p>Data: 15 de Junho de 2025</p>
+            </li>
+            <li>
+                <a href="#">Inscrições abertas para o campeonato esportivo escolar</a>
+                <p>Data: 1º de Maio de 2025</p>
+            </li>
+            <li>
+                <a href="#">Projeto de sustentabilidade premiado nacionalmente</a>
+                <p>Data: 22 de Abril de 2025</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Mapa e Contato Rápido -->
+    <section id="mapa" class="maps">
+        <h2>Nossa Localização</h2>
+        <div class="maps-content">
+            <div class="mapa">
+                <!-- Use iframe Google Maps com a localização da escola -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.639929985563!2d-46.6552293845079!3d-23.56473798468639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c2b78497a7%3A0x7a1d46a9e4502a87!2sEscola%20Educacional%20S%C3%A3o%20Jos%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1589530440968!5m2!1spt-BR!2sbr"
+                    width="100%" height="300" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container footer-container">
+            <div class="contatos-rodape">
+                <p><strong>Email:</strong> contato@escolasaojose.edu.br</p>
+                <p><strong>Telefone:</strong> (11) 1234-5678</p>
+                <p><strong>WhatsApp:</strong> (11) 91234-5678</p>
+                <div class="redes-rodape">
+                    <a href="#" aria-label="Facebook"><img src="facebook.png" alt="Facebook" /></a>
+                    <a href="#" aria-label="Instagram"><img src="instagram.png" alt="Instagram" /></a>
+                    <a href="#" aria-label="Twitter"><img src="twitter_x.png" alt="Twitter" /></a>
+                </div>
+            </div>
+            <p>© 2025 Escola Educacional São José - Todos os direitos reservados.</p>
+            <p>Desenvolvido por SuaEmpresa</p>
+        </div>
+    </footer>
+
+    <script src="banner-slider.js"></script>
+</body>
+
+</html>
