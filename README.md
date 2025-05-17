@@ -31,4 +31,4 @@ O **Portal Escolar - Escola Educacional São José** é uma plataforma web desen
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seuusuario/portal-escolar.git
+   git clone https://github.com/FernandoWernner/portal-escolar.git
