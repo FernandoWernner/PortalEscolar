@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #cce4f7; /* Fundo azul clarinho igual ao banner do index */
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===========================
+   Cabeçalho
+=========================== */
+header {
+  background-color: #004080; /* mesmo azul escuro do index */
+  color: white;
+  padding: 15px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-start; /* alinha tudo à esquerda */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px; /* espaço entre logo e menu */
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #0066cc; /* mesmo hover do index */
+}
+
+/* ===========================
+   Seção de Matrícula
+=========================== */
+.matricula {
+  margin-top: 40px;
+  background-color: #cce4f7; /* azul clarinho igual ao fundo */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+
+.matricula h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #004080; /* título azul igual ao index */
+}
+
+.matricula p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-matricula {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-matricula input,
+.form-matricula select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-matricula button {
+  padding: 14px;
+  background-color: #004080; /* botão azul escuro */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-matricula button:hover {
+  background-color: #00264d; /* hover do botão igual ao index */
+}
+
+/* ===========================
+   Rodapé
+=========================== */
+footer {
+  background-color: #00264d; /* rodapé igual ao index */
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
