@@ -9,7 +9,6 @@ O **Portal Escolar - Escola Educacional São José** é uma plataforma web desen
 - Apresentação institucional da escola, incluindo missão, visão, valores e equipe pedagógica.
 - Informações completas sobre cursos e atividades, organizadas por níveis de ensino (Infantil, Fundamental e Médio).
 - Galeria multimídia com fotos e vídeos de eventos escolares.
-- Formulário de contato para comunicação direta com a instituição.
 - Mapa interativo para localização da escola.
 - Compatibilidade com os principais navegadores modernos.
 
