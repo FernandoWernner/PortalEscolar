@@ -1,5 +1,5 @@
 /* Reset básico */
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,6 +13,7 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Container geral */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -42,6 +43,8 @@ nav ul.menu {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav ul.menu li a {
@@ -49,16 +52,19 @@ nav ul.menu li a {
   text-decoration: none;
   font-weight: 500;
   padding: 8px 12px;
-  transition: background-color 0.3s ease;
   border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul.menu li a:hover,
-nav ul.menu li a:focus {
+nav ul.menu li a:focus-visible {
   background-color: #0066cc;
-  outline: none;
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
 }
 
+/* Ícones sociais no cabeçalho */
 .social-icons a {
   margin-left: 15px;
   display: inline-block;
@@ -71,9 +77,11 @@ nav ul.menu li a:focus {
 }
 
 .social-icons a:hover img,
-.social-icons a:focus img {
+.social-icons a:focus-visible img {
   filter: brightness(0) invert(0.7);
-  outline: none;
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+  cursor: pointer;
 }
 
 /* Banner Principal */
@@ -109,14 +117,16 @@ nav ul.menu li a:focus {
   text-decoration: none;
   font-weight: 700;
   border-radius: 6px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
 }
 
 .cta-btn:hover,
-.cta-btn:focus {
+.cta-btn:focus-visible {
   background-color: #00264d;
-  outline: none;
-  cursor: pointer;
+  outline: 2px solid #00264d;
+  outline-offset: 2px;
 }
 
 /* Banner slider */
@@ -130,10 +140,18 @@ nav ul.menu li a:focus {
 }
 
 .banner-slider .slide {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   width: 100%;
   height: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.banner-slider .slide.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
 }
 
 .banner-slider .slide img {
@@ -141,10 +159,6 @@ nav ul.menu li a:focus {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
-}
-
-.banner-slider .slide.active {
-  display: block;
 }
 
 .banner-slider .prev,
@@ -160,6 +174,7 @@ nav ul.menu li a:focus {
   cursor: pointer;
   border-radius: 4px;
   user-select: none;
+  transition: background-color 0.3s ease;
 }
 
 .banner-slider .prev {
@@ -172,10 +187,11 @@ nav ul.menu li a:focus {
 
 .banner-slider .prev:hover,
 .banner-slider .next:hover,
-.banner-slider .prev:focus,
-.banner-slider .next:focus {
+.banner-slider .prev:focus-visible,
+.banner-slider .next:focus-visible {
   background-color: rgba(0,0,0,0.7);
-  outline: none;
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
 }
 
 /* Destaques da Escola */
@@ -205,12 +221,14 @@ nav ul.menu li a:focus {
   width: 260px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .destaques .card:hover,
 .destaques .card:focus-within {
   transform: translateY(-8px);
-  outline: none;
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
 }
 
 .destaques .card h3 {
@@ -252,28 +270,45 @@ nav ul.menu li a:focus {
   font-style: italic;
   color: #222;
   position: relative;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .depoimentos blockquote {
   quotes: "“" "”" "‘" "’";
+  position: relative;
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #222;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .depoimentos blockquote::before {
   content: open-quote;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #004080;
   position: absolute;
   top: 10px;
-  left: 20px;
+  left: 15px;
+  line-height: 1;
+  user-select: none;
 }
 
 .depoimentos blockquote::after {
   content: close-quote;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #004080;
   position: absolute;
   bottom: 10px;
-  right: 20px;
+  right: 15px;
+  line-height: 1;
+  user-select: none;
 }
 
 .depoimentos p {
@@ -282,6 +317,7 @@ nav ul.menu li a:focus {
   font-weight: 700;
   color: #004080;
 }
+
 
 /* Notícias e Eventos */
 .noticias {
@@ -313,14 +349,18 @@ nav ul.menu li a:focus {
   color: #004080;
   text-decoration: none;
   font-size: 1.15rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .noticias ul li a:hover,
-.noticias ul li a:focus {
+.noticias ul li a:focus-visible {
   text-decoration: underline;
-  outline: none;
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
 }
 
+/* Texto das notícias */
 .noticias ul li p {
   font-size: 0.9rem;
   color: #666;
@@ -353,7 +393,66 @@ nav ul.menu li a:focus {
   flex: 1 1 400px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+
+.formulario {
+  flex: 1 1 400px;
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.formulario label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #004080;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #004080;
+  outline: none;
+  box-shadow: 0 0 5px #004080aa;
+}
+
+.formulario button {
+  background-color: #004080;
+  color: #fff;
+  padding: 14px 30px;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario button:hover,
+.formulario button:focus-visible {
+  background-color: #00264d;
+  outline: 2px solid #00264d;
+  outline-offset: 2px;
 }
 
 /* Rodapé */
@@ -444,3 +543,4 @@ footer {
     gap: 12px;
   }
 }
+
