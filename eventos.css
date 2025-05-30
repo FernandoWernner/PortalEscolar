@@ -34,15 +34,15 @@ header {
 }
 
 .logo img {
-  height: 100px; 
-   
- 
+  height: 50px;
 }
 
 nav ul.menu {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav ul.menu li a {
@@ -50,17 +50,37 @@ nav ul.menu li a {
   text-decoration: none;
   font-weight: 500;
   padding: 8px 12px;
-  transition: background-color 0.3s ease;
   border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul.menu li a:hover,
-nav ul.menu li a:focus {
+nav ul.menu li a:focus-visible {
   background-color: #0066cc;
-  outline: none;
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
 }
 
+/* Ícones sociais no cabeçalho */
+.social-icons a {
+  margin-left: 15px;
+  display: inline-block;
+}
 
+.social-icons img {
+  width: 22px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img,
+.social-icons a:focus-visible img {
+  filter: brightness(0) invert(0.7);
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+  cursor: pointer;
+}
 /* Banner Principal */
 .banner {
   position: relative;
@@ -308,8 +328,6 @@ nav ul.menu li a:focus {
   margin: 0 auto;
 }
 
-
-
 /* Rodapé */
 footer {
   background-color: #00264d;
@@ -347,54 +365,4 @@ footer {
 .redes-rodape a:focus img {
   filter: brightness(0) invert(0.7);
   outline: none;
-}
-
-/* Responsividade */
-@media (max-width: 900px) {
-  .header-container {
-    justify-content: center;
-    gap: 20px;
-  }
-
-  nav ul.menu {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .destaques .cards,
-  .depoimentos .cards,
-  .contato-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .destaques .card,
-  .depoimentos .card,
-  .info-contato,
-  .mapa {
-    width: 100%;
-    max-width: 420px;
-  }
-
-  .banner-content h1 {
-    font-size: 2rem;
-  }
-
-  .banner-content p {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .banner-content h1 {
-    font-size: 1.7rem;
-  }
-
-  .banner-content p {
-    font-size: 1rem;
-  }
-
-  nav ul.menu {
-    gap: 12px;
-  }
 }
