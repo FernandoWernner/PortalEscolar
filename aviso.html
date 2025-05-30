@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aviso - Matrícula</title>
   <link rel="stylesheet" href="matriculas.css">
 </head>
+
 <body>
   <header>
     <div class="container header-container">
@@ -13,25 +15,49 @@
         <img src="logo.png" alt="Logotipo Escola São José" />
       </div>
       <nav>
-        <ul>
-          <li><a href="index.html">Início</a></li>
+        <ul class="menu">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#sobre">Sobre a Escola</a></li>
+          <li><a href="eventos.html">Galeria</a></li>
+          <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="matricula">
-      <div class="container">
-        <h2>Matrícula Enviada!</h2>
-        <p>Obrigado por realizar sua pré-matrícula. Em breve entraremos em contato com mais informações.</p>
-        <a href="index.html" style="display: inline-block; margin-top: 20px; background-color: #004080; color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none;">Voltar ao Início</a>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="facebook.png" alt="Facebook" /></a>
+        <a href="#" aria-label="Instagram"><img src="instagram.png" alt="Instagram" /></a>
+        <a href="#" aria-label="Twitter"><img src="twitter_x.png" alt="Twitter" /></a>
       </div>
-    </section>
-  </main>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Escola Exemplo. Todos os direitos reservados.</p>
-  </footer>
+    <main>
+      <section class="matricula">
+        <div class="container">
+          <h2>Pré-Matrícula Enviada!</h2>
+          <p>Obrigado por realizar sua pré-matrícula. Em breve entraremos em contato com mais informações.</p>
+          <a href="index.html"
+            style="display: inline-block; margin-top: 20px; background-color: #004080; color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none;">Voltar
+            ao Início</a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contato">
+      <div class="container footer-container">
+        <div class="contatos-rodape">
+          <p><strong>Email:</strong> contato@escolasaojose.edu.br</p>
+          <p><strong>Telefone:</strong> (11) 1234-5678</p>
+          <p><strong>WhatsApp:</strong> (11) 91234-5678</p>
+          <div class="redes-rodape">
+            <a href="#" aria-label="Facebook"><img src="facebook.png" alt="Facebook" /></a>
+            <a href="#" aria-label="Instagram"><img src="instagram.png" alt="Instagram" /></a>
+            <a href="#" aria-label="Twitter"><img src="twitter_x.png" alt="Twitter" /></a>
+          </div>
+        </div>
+        <p>© 2025 Escola Educacional São José - Todos os direitos reservados.</p>
+        <p>Desenvolvido por PortalEscolar</p>
+      </div>
+    </footer>
+
 </body>
+
 </html>
