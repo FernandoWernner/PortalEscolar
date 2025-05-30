@@ -20,10 +20,12 @@ body {
 }
 
 /* ====== Cabeçalho ====== */
+/* Cabeçalho */
 header {
-  background-color: #004080; /* azul escuro */
-  color: white;
-  padding: 15px 20px; /* dê um pouco de padding nas laterais */
+  background-color: #004080;
+  color: #fff;
+  padding: 0px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .header-container {
@@ -81,7 +83,6 @@ nav ul.menu li a:focus-visible {
   outline-offset: 2px;
   cursor: pointer;
 }
-
 /* ====== Seção pré-matrícula ====== */
 .prematricula {
   margin-top: 40px;
@@ -152,26 +153,56 @@ nav ul.menu li a:focus-visible {
 }
 
 /* ====== Rodapé ====== */
+/* Rodapé */
 footer {
   background-color: #00264d;
   color: #ccc;
-  padding: 25px 0;
-  margin-top: 60px;
+  padding: 25px 20px;
   text-align: center;
   font-size: 0.9rem;
 }
 
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contatos-rodape {
+  margin-bottom: 15px;
+}
+
+.contatos-rodape p {
+  margin: 6px 0;
+}
+
+.redes-rodape a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.redes-rodape img {
+  width: 22px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.redes-rodape a:hover img,
+.redes-rodape a:focus img {
+  filter: brightness(0) invert(0.7);
+  outline: none;
+}
+
+
 /* ====== Responsividade ====== */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .header-container {
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
   }
 
-  nav ul {
+  nav ul.menu {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
   }
 
   .prematricula {
